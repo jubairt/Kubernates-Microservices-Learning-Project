@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: docker_review-user-service  # replace with your built image
+          image: user-service:latest # replace with your built image
           ports:
             - containerPort: 5001
 
