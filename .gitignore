@@ -1,0 +1,49 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE files
+.vscode/
+.idea/
+
+# Docker files
+*.log
+docker-compose.override.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyCharm + JetBrains
+*.iml
+*.ipr
+*.iws
+out/
+
+# Byte-compiled or optimized or compiled files
+*.py[cod]
+
+# Pip dependency wheels
+wheels/
+
+# Coverage reports
+htmlcov/
+.tox/
+coverage.xml
+.cache
+pytest_cache/
+
+
+# Ignore temp folders
+temp/
+tmp/
+
+# Ignore compiled FastAPI static builds (if any)
+staticfiles/
