@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: docker_review-product-service  # replace with your built image
+          image: product-service:latest # replace with your built image
           ports:
             - containerPort: 5002
 
