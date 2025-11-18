@@ -40,11 +40,49 @@ No IP addresses needed — Kubernetes handles routing automatically.
 
 ## ▶️ Step-by-Step: Deploying to Kubernetes
 
-### **1. Build Docker Images**
+## 1. Delete Old Resources
 
-Build images for each microservice:
+Delete everything:
 
 ```bash
-docker build -t <your-dockerhub-username>/user-service ./user-service
-docker build -t <your-dockerhub-username>/product-service ./product-service
-docker build -t <your-dockerhub-username>/order-service ./order-service
+kubectl delete -f k8s/
+```
+
+## 2. Build Docker Images Locally
+
+Run these from your project root:
+
+```bash
+docker build -t user-service:latest ./user-service
+docker build -t product-service:latest ./product-service
+docker build -t order-service:latest ./order-service
+```
+
+## 3. Deploy to Kubernetes
+
+Delete everything:
+
+```bash
+kubectl apply -f k8s/
+```
+
+## 4. Check Everything is Running
+
+Check pods:
+
+```bash
+kubectl get pods
+```
+
+Check services:
+
+```bash
+kubectl get svc
+```
+
+## ✅ Conclusion
+
+This project shows how to build Docker images, load them into a kind cluster, and deploy FastAPI microservices on Kubernetes.  
+It provides a simple foundation for understanding microservice deployment and can be extended as you learn more. 
+
+
