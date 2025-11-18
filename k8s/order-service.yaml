@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: order-service
-          image: docker_review-order-service   # replace with your built image
+          image: order-service:latest # replace with your built image
           ports:
             - containerPort: 5003
 
